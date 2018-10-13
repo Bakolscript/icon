@@ -1,0 +1,19 @@
+ <link href="https://bakolscript.github.io/icon/css/framework7-icons.css" rel="stylesheet" type="text/css" />
+  
+  <script>
+    var icons = document.querySelectorAll('.content .f7-icons');
+    function showPreview(e) {
+      var icon = e.target.textContent;
+      var previewIcons = document.querySelectorAll('.icon-preview .f7-icons');
+      for (var j = 0; j < previewIcons.length; j++) {
+        previewIcons[j].textContent = icon;
+      }
+      document.querySelector('.icon-preview').style.display = 'block';
+      document.querySelector('.icon-preview-name b').textContent = icon;
+    }
+    for (var i = 0; i < icons.length; i++) {
+      icons[i].addEventListener('click', showPreview);
+    }
+  </script>
+  
+  <i class="f7-icons size-22">home</i>
